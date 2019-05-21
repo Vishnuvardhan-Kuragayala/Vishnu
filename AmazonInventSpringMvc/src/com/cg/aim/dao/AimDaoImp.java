@@ -27,31 +27,24 @@ public class AimDaoImp implements AimDaoDb  {
 		return locker;
 	}
 	@Override
-	public Item addItem(int lockerId, String itemName, LockerLog locker) {
+	public Item addingItem(int lockerId, String itemName, LockerLog locker) {
 		
 		Locker loc;
 		loc=entitymanager.find(Locker.class,lockerId);
 		List<Item>items=new ArrayList<Item>();
 		Item item=new Item();
-		item.setBatchNumber(batchNumber);
+		item.setBatchNumber(lockerId);
 		item.setName(itemName);
-		item.setId(itemId);
-
-		items=loc.getLocker
-		
-		
-		
-		
-		
-		
-		
-		
-		return null;
+		items=loc.getItem();
+		items.add(item);
+		loc.setItem(items);
+		entitymanager.persist(loc);
+		entitymanager.flush();
+		return item;
 	}
-	
 
-	
-	
+
+		
 	
 	
 }

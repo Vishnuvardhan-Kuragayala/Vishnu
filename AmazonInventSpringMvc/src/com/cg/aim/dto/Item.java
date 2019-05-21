@@ -2,6 +2,8 @@ package com.cg.aim.dto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -12,6 +14,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Item {
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="item_id")
     private int Id;
 	@Column(name="item_name")
@@ -46,6 +49,10 @@ public class Item {
 	}
 	public Item() {
 		super();
+	}
+	@Override
+	public String toString() {
+		return "Item [Id=" + Id + ", name=" + name + ", batchNumber=" + batchNumber + "]";
 	}
 	
 

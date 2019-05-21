@@ -6,5 +6,5 @@ import com.cg.aim.dto.LockerLog;
 
 public interface AimDaoDb {
 	public Locker save(Locker locker);	
-	public Item addItem(int lockerId,String itemName,LockerLog locker);
+	public Item addingItem(int lockerId,String itemName,LockerLog locker);
 }
