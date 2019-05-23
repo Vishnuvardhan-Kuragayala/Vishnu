@@ -55,7 +55,7 @@ public class AimController {
 		System.out.println(lockerLog.getDescription());
 		Locker locker=service.add(lockerLog);
 		
-		return new ModelAndView("successOne","key",locker);
+		return new ModelAndView("successtwo","key",locker);
 	}
 	@GetMapping("additems")
 	public ModelAndView getItem(@ModelAttribute("item") Item item)
@@ -79,6 +79,7 @@ public class AimController {
 		service.add(log);
 		return new ModelAndView("additem","key",item);
 	}
+
 	
 	@GetMapping("showitems")
 	public ModelAndView showItem()
@@ -88,5 +89,27 @@ public class AimController {
 		return new ModelAndView("showallitems","items",items);
 		
 	}
+	
+	
+	
+	
+	
+	@GetMapping("searchlocker")
+	public ModelAndView getsearch(@ModelAttribute("searchlocker")Locker locker)
+	{
+		return new ModelAndView("Searchlockerr");
+	}
+	@PostMapping("searchLockerr")
+	public ModelAndView SearchLockerr(@ModelAttribute("searchlockerr")Locker lockerr,@RequestParam("lockerId")int lockerr_id)
+	{
+		Locker Lockerlit;
+		Lockerlit=service.searchById(lockerr_id);
+		
+		
+		
+		return new ModelAndView("successOne","lockers",Lockerlit);
+		
+	}
+	
 	
 }

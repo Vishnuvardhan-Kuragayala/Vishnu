@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%-- Added lockerLog Id ${key.id} --%>
- Locker is existing,Locker is  ${lockers.lockerId }  capacity of locker is ${lockers.capacity }
+ Added lockerLog Id ${key.id} 
+
 </body>
 </html>

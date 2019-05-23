@@ -10,5 +10,6 @@
 <a href ="addlocker" >Add a Locker</a>
 <a href ="additems" >Adding Items</a>
 <a href ="showitems" >Show all Items</a>
+<a href ="searchlocker">Search></a>
 </body>
 </html>
