@@ -9,7 +9,7 @@ import com.cg.aim.dto.LockerLog;
 public interface AimService {
 	public Locker add(LockerLog lockerLog);
 	public List<Item> showAll();
-	public List<Locker>showall();
+
 	public Locker searchById(int lockerId);
 	
 

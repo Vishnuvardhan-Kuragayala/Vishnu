@@ -6,31 +6,41 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
-<h1> Add.......Locker</h1>
+<style>
+#example1 {
+  border: 2px solid black;
+  padding: 382px;
+  background: url('https://quicklinestorage.co.uk/wp-content/uploads/2016/05/Blog-Maximising-warehouse-space.jpg'), url(LOCKER.jpg);
+  background-repeat: no-repeat;
+  background-size: contain, cover;
+}
+</style>
+
+<body><div id="example1">
+<h1> Adds Locker</h1>
 <r:form action="addLocOne" method="post" modelAttribute="log">
  <table>
 
  
  
   <tr>
- <td>LockerId</td>
+ <td><strong>LockerId</strong></td>
  <td><r:input path="locker.lockerId" required="true"/></td>
  </tr>
  <tr>
- <td>Locker capacity</td>
+ <td><strong>Locker capacity</strong></td>
  <td><r:input path="locker.capacity" required="true"/></td>
  </tr>
  <tr>
- <td>LockerLog Requester name</td>
+ <td><strong>LockerLog Requester name</strong></td>
  <td><r:input path="requester" required="true"/></td>
  </tr>
  <tr>
- <td>LockerLog Description</td>
+ <td><strong>LockerLog Description</strong></td>
  <td><r:input path="description" required="true"/></td>
  </tr>
  <tr>
- <td>date</td>
+ <td><strong>date</strong></td>
  <td><r:input path="date" required="true"/></td>
  </tr>
  
@@ -38,6 +48,6 @@
  <td><input type="submit" value="Add LockerLog"/></td>
  </tr>
  </table>
-</r:form>
+</r:form></div>
 </body>
 </html>

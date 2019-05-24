@@ -14,7 +14,7 @@ public interface AimDaoDb {
 	public Locker save(LockerLog lockerLog);	
 	public Locker findById(int id) ;
 	public List<Item> showAll();
-	public List<Locker>showall();
+
 		
 	
 

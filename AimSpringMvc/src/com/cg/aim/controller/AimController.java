@@ -48,7 +48,7 @@ public class AimController {
 		return new ModelAndView("addOne");
 		
 	}
-	@PostMapping("addLocOne")
+	@PostMapping("ad dLocOne")
 
 	public ModelAndView addLocker(@ModelAttribute("log") LockerLog lockerLog)
 	{
@@ -89,11 +89,6 @@ public class AimController {
 		return new ModelAndView("showallitems","items",items);
 		
 	}
-	
-	
-	
-	
-	
 	@GetMapping("searchlocker")
 	public ModelAndView getsearch(@ModelAttribute("searchlocker")Locker locker)
 	{
