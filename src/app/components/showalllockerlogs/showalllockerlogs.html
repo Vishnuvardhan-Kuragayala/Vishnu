@@ -1,0 +1,20 @@
+<input type="button" value="show all LockerLogs" (click)="showalllockerlogs()">
+<div id="example1">
+    <table>
+    <tr>
+    
+    <td><strong>LockerLogId</strong></td>
+    <td><strong>Requester</strong></td>
+    <td><strong>Description</strong></td>
+    </tr>
+    <div *ngFor="let lockerlog of LockerLogs">
+    <tr>
+    
+    <td><strong>{{lockerlog.id}}</strong></td>
+    <td><strong>{{lockerlog.requester}}</strong></td>
+    <td><strong>{{lockerlog.description}}</strong></td>
+    </tr>
+    </div>
+    </table>
+    </div>
+    
